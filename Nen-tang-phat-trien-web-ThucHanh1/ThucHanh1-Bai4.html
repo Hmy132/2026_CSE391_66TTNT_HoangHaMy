@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4: Form</title>
+    <link rel="stylesheet" href="form-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-section">
+            <h3>Basic Info</h3>
+            <div class="form-row">
+                <div class="label">Employee ID</div>
+                <div class="ID">9</div>
+            </div>
+            <div class="form-row">
+                <div class="label">Last Name</div>
+                <div class="field"><input type="text" value="Dodsworth"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">First Name</div>
+                <div class="field"><input type="text" value="Anne"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Gender</div>
+                <div class="field radio-group">
+                    <label><input type="radio" name="gender">Male</label>
+                    <label><input type="radio" name="gender">Female</label>
+                    <label><input type="radio" name="gender">XXX</label>
+                    <label><input type="radio" name="gender" checked>ZZZ</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">Title</div>
+                <div class="field"><input type="text" value="Sales Representative"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Suffix</div>
+                <div class="field"><input type="text" value="Ms."></div>
+            </div>
+            <div class="form-row">
+                <div class="label">BirthDate</div>
+                <div class="field"><input type="datetime-local" value=""></div>
+            </div>
+            <div class="form-row">
+                <div class="label">HireDate</div>
+                <div class="field"><input type="datetime-local" value=""></div>
+            </div>
+            <div class="form-row">
+                <div class="label">SSN # (if applicable )</div>
+                <div class="field"><input type="text" value=""></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Reports To</div>
+                <div class="field">
+                    <select>
+                        <option>Buchanan</option>
+                        <option>Davolio</option>
+                        <option>Jonh</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            <h3>Contact Info</h3>
+            <div class="form-row">
+                <div class="label">Email</div>
+                <div class="field"><input type="email" placeholder="name@example.com"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Address</div>
+                <div class="field"><input type="text" value="7 Houndstooth Rd."></div>
+            </div>
+            <div class="form-row">
+                <div class="label">City</div>
+                <div class="field"><input type="text" value="London"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Region</div>
+                <div class="field"><input type="text" value=""></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Postal code</div>
+                <div class="field"><input type="text" value="WG2 7TL"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Country</div>
+                <div class="field">
+                    <select>
+                        <option>Russian Federation</option>
+                        <option>Vietnam</option>
+                        <option>USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">US Home Phone</div>
+                <div class="field"><input type="tel" value="(234)234-2341"></div>
+            </div>
+            <div class="form-row">
+                <div class="label">Photo</div>
+                <div class="field"><input type="file"></div>
+            </div>
+        </div>
+        <div class="form-section">
+            <h3>Optional Info</h3>
+            <div class="form-row">
+                <div class="label">Note</div>
+                <div class="field">
+                    <div class="editor-toolbar">
+                        
+                    </div>
+                    <textarea rows="5">Anne hass a BA degree in English...</textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">Preferred Shift</div>
+                <div class="field">
+                    <label><input type="checkbox">Regular</label>
+                    <label><input type="checkbox" checked>Gravy Yard</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">Are you human?</div>
+                <div class="field">
+                    <div class="capcha-box">T I D A W O</div>
+                    <small>Click to change</small>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <div class="footer-left">
+                <button><i><</i></button>
+                <button><i>></i></button>
+            </div>
+            <div class="footer-right">
+                <input type="submit" value="submit">
+                <button class="cancel">
+                    <i>Cancel</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
