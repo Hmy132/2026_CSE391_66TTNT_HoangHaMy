@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đặt Hàng</title>
+    <link rel="stylesheet" href="TH4-Bai2.2-CSS.css">
+</head>
+<body>
+    <div class="form-container">
+        <div id="orderWrapper">
+            <h2>Đặt Hàng Trực Tuyến</h2>
+            <form id="orderForm" novalidate>
+                
+                <div class="form-group">
+                    <label>Sản phẩm *</label>
+                    <select id="product">
+                        <option value="">-- Chọn sản phẩm --</option>
+                        <option value="Áo">Áo thun (150.000đ)</option>
+                        <option value="Quần">Quần Jeans (200.000đ)</option>
+                        <option value="Giày">Giày Sneaker (350.000đ)</option>
+                    </select>
+                    <span class="error-msg" id="productError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Số lượng (1 - 99) *</label>
+                    <input type="number" id="quantity" min="1" max="99" placeholder="Nhập số lượng">
+                    <span class="error-msg" id="quantityError"></span>
+                </div>
+                <div class="total-price-box">
+                    Tổng tiền: <span id="totalPrice">0</span> VNĐ
+                </div>
+
+                <div class="form-group">
+                    <label>Ngày giao hàng *</label>
+                    <input type="date" id="deliveryDate">
+                    <span class="error-msg" id="dateError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Địa chỉ giao hàng (≥ 10 ký tự) *</label>
+                    <input type="text" id="address" placeholder="Nhập địa chỉ chi tiết...">
+                    <span class="error-msg" id="addressError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Ghi chú (Tùy chọn)</label>
+                    <textarea id="notes" rows="3" placeholder="Ghi chú thêm cho người giao hàng..."></textarea>
+                    <div class="char-counter" id="charCount">0/200</div>
+                    <span class="error-msg" id="notesError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Phương thức thanh toán *</label>
+                    <div class="radio-group">
+                        <input type="radio" id="payCOD" name="payment" value="COD"> <label for="payCOD" class="inline-label">COD</label>
+                        <input type="radio" id="payBank" name="payment" value="Chuyển khoản"> <label for="payBank" class="inline-label">Chuyển khoản</label>
+                        <input type="radio" id="payWallet" name="payment" value="Ví điện tử"> <label for="payWallet" class="inline-label">Ví điện tử</label>
+                    </div>
+                    <span class="error-msg" id="paymentError"></span>
+                </div>
+
+                <button type="submit" id="btnSubmit">Đặt Hàng</button>
+            </form>
+        </div>
+        <div id="confirmWrapper" class="hidden">
+            <h3>Xác nhận đơn hàng</h3>
+            <div class="summary-box">
+                <p><strong>Sản phẩm:</strong> <span id="summaryProduct"></span></p>
+                <p><strong>Số lượng:</strong> <span id="summaryQuantity"></span></p>
+                <p><strong>Ngày giao:</strong> <span id="summaryDate"></span></p>
+                <p class="highlight"><strong>Tổng tiền:</strong> <span id="summaryTotal"></span> VNĐ</p>
+            </div>
+            <div class="btn-group">
+                <button id="btnCancel" class="btn-secondary">Quay lại sửa</button>
+                <button id="btnConfirm" class="btn-primary">Xác nhận Đặt</button>
+            </div>
+        </div>
+        <div id="successWrapper" class="hidden">
+            <h2 style="color: green;">Đặt hàng thành công!</h2>
+            <p>Đơn hàng của bạn đang được xử lý.</p>
+        </div>
+    </div>
+
+    <script src="TH4-Bai2.2-JS.js"></script>
+</body>
+</html>
